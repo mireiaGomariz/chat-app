@@ -9,8 +9,8 @@ function Table(props) {
       <table>
         <thead>
           <tr>
-            <th>Name</th>
             <th>Avatar</th>
+            <th>Name</th>
             <th>Status</th>
           </tr>
         </thead>
