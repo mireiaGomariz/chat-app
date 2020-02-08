@@ -3,8 +3,17 @@ import '../chat.css';
 
 
 
-function Table(props) {
+class Table extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {}
+    props.contact.map(function(person, i){
+      this.state["status"+i] = person.status
+    }, this)
+    console.log(this.state)
+  }
 
+  render() {
     return (
       <table>
         <thead>
@@ -15,22 +24,30 @@ function Table(props) {
           </tr>
         </thead>
         <tbody>
-          {props.contact.map(person => {
+          {this.props.contact.map(function(person, i){
             return (
-            <tr>
-            <td><img className="avatar" src={person.avatar}/></td>
+            <tr key={i}>
+              <td><img className="avatar"  src={person.avatar}/>
+              </td>
 
-               <td className="name">{person.name}</td>
-               <td>{person.status === true ? "Online" : "Offline" }
-                </td>
-              </tr>
+              <td className="name">{person.name}</td>
+              <td
+                onClick = {event => {
+                  const newStatus = !this.state["status"+i];
+                  this.setState ({["status"+i]: newStatus });
+                }}>
+                {this.state["status"+i] === true ? "Online" : "Offline" }
+              </td>
+            </tr>
           )
-          })}
+          }, this)
+          }
 
         </tbody>
       </table>
-      )
-    }
+    )
+  }
+}
 
 
 

@@ -9,11 +9,6 @@ import Table from './components/Contactlist/contactlist'
     {
       name: 'Mireia',
       avatar: ("https://avatars0.githubusercontent.com/u/47714488?s=400&v=4"),
-      status: true,
-    },
-    {
-      name: 'Marta',
-      avatar: ("https://avatars0.githubusercontent.com/u/47714488?s=400&v=4"),
       status: false,
     },
     {
@@ -22,14 +17,19 @@ import Table from './components/Contactlist/contactlist'
       status: true,
     },
     {
-      name: 'Onis',
+      name: 'Edu',
+      avatar: ("https://avatars0.githubusercontent.com/u/47714488?s=400&v=4"),
+      status: false,
+    },
+    {
+      name: 'Margarita',
       avatar: ("https://avatars0.githubusercontent.com/u/47714488?s=400&v=4"),
       status: true,
     },
     {
-      name: 'Onis',
+      name: 'Marta',
       avatar: ("https://avatars0.githubusercontent.com/u/47714488?s=400&v=4"),
-      status: true,
+      status: false,
     },
 
   ];
